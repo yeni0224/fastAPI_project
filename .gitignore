@@ -2,16 +2,17 @@
 __pycache__/
 *.py[codz]
 *$py.class
-*.pyc
-*.pyo
-*.pyd
-.Python
+
+# Virtual environments
 venv/
 env/
 .venv/
-.env/
-*.db
-*.sqlite3
+Scripts/
+Lib/
+Include/
+bin/
+*.ps1
+*.bat
 
 # C extensions
 *.so
@@ -35,6 +36,18 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+# Database files
+*.db
+*.sqlite3
+
+# Environment variables
+.env
+*.env
+
+# IDE / Editor settings
+.vscode/
+.idea/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
