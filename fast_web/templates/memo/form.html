@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="UTF-8"><title>새 메모 작성</title></head>
+<body>
+    <h1>새 메모 작성</h1>
+    <form action="/notes/" method="post">
+        <label>제목: <input type="text" name="title" required></label><br>
+        <label>내용:<br>
+            <textarea name="content" rows="5" cols="40" required></textarea>
+        </label><br>
+        <button type="submit">저장</button>
+    </form>
+</body>   
+</html>

@@ -228,3 +228,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+#업로드 폴더
+upload/
