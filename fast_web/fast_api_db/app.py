@@ -11,16 +11,17 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 #템플릿 지정
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) 
+#하위경로에 저장 시 ".." 추가해야함
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "..", "templates"))
 
-# DB 세션 의존성
+# DB 세션 의존성 : 요청할 때마다 DB연결 열고->사용->연결종료
 def get_db():
-    db = SessionLocal()
+    db = SessionLocal() # 세션 생성
     try:
-        yield db
+        yield db # db 사용이 끝날때까지 대기, 요청 끝나고 돌아오면
     finally:
-        db.close()
+        db.close() # 세션 종료
 
 #  메모 목록
 @app.get("/", response_class=HTMLResponse)
