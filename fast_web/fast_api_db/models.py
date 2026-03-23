@@ -11,3 +11,6 @@ class Note(Base): #모델이기 때문에 항상 base를 상속받아야함.
     id = Column(Integer, primary_key=True, index = True) 
     title = Column(String(255), nullable=False) # varchar
     content = Column(Text, nullable=False)
+
+    #파일 경로 또는 파일명을 저장할 컬럼 추가
+    file_path = Column(String(255), nullable=True)

@@ -20,6 +20,7 @@ class NoteUpdate(NoteBase):
 
 class  NoteOut(NoteBase):
     id : int
+    file_path : str | None = None #값이 없으면 None으로 대체
     class Config:
         # ORM 객체를 자동으로 dict처럼 읽음 -> JSON으로 변환
         orm_mode = True
